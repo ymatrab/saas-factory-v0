@@ -1,3 +1,8 @@
+---
+name: seo-playbook
+description: SaaS Factory SEO workflow — page/intent mapping, search-intent gate, when to stop on-page polish.
+---
+
 # SEO / GEO / AEO Skill
 
 ## Workflow

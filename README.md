@@ -15,9 +15,10 @@ Default stack:
 ## Why this folder is isolated
 Keep this folder/repository separate from your global Claude Code configuration. `CLAUDE.md`, `.claude/agents`, `.claude/skills`, rules, prompts, and templates are all scoped to this SaaS Factory project.
 
-## Six V0 agents
+## Seven V0 agents
 - orchestrator
 - builder
+- marketing (sales, copy, conversion — before design)
 - design
 - seo
 - content

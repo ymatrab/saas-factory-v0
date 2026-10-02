@@ -1,3 +1,8 @@
+---
+name: qa-launch
+description: SaaS Factory release pass, production release verification and live site checker (no local installs).
+---
+
 # QA + Launch Skill
 
 ## Minimum release pass

@@ -1,3 +1,8 @@
+---
+name: builder
+description: SaaS Factory builder procedures — implementation checklist, surviving schema changes, resilient AI generation, payments, regulated-content gate, versioned rule engines.
+---
+
 # Builder Skill Set
 
 Use this skill for implementation work on the default SaaS stack.

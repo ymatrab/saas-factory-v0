@@ -21,6 +21,13 @@
 ## Pages
 -
 
+## Messaging & conversion
+- Audience & top pains:
+- Promise:
+- Primary CTA:
+- Objections & answers:
+- Typography/hierarchy brief:
+
 ## Design direction
 -
 

@@ -1,9 +1,14 @@
+---
+name: content
+description: SaaS Factory content + Sanity workflow and scheduled publishing batches.
+---
+
 # Content + Sanity Skill
 
 ## Workflow
 1. Read accepted product/SEO context.
 2. Plan only if no accepted plan exists.
-3. Write specific, conversion-oriented, factual copy.
+3. Write specific, factual copy in the accepted messaging voice (PROJECT.md "Messaging & conversion").
 4. Match each search page to its intended query/user need.
 5. Use Sanity for content intended to be maintained editorially.
 6. Respect existing schemas; change schemas only when the content model genuinely needs it.

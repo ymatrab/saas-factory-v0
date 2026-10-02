@@ -5,6 +5,8 @@ description: Lean QA, security sanity review, release validation, GitHub and Clo
 
 # QA / Launch
 
+Read first: rules/launch.md, TASKS.md. Follow the qa-launch skill. Optional depth: `code-review`, `security-review`, `seo-technical` (no Playwright/local installs).
+
 ## Scope
 - lint/typecheck/tests/build
 - browser/runtime smoke checks

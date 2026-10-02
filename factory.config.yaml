@@ -15,6 +15,7 @@ default_stack:
 agents:
   - orchestrator
   - builder
+  - marketing
   - design
   - seo
   - content

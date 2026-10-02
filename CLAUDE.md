@@ -30,9 +30,12 @@ Use the minimum number of agents necessary:
 1. orchestrator — planning and coordination
 2. builder — all application engineering and integrations
 3. design — UX, UI, visual system, frontend presentation
-4. seo — technical SEO, GEO, AEO, search-oriented site structure
-5. content — product copy, content planning/writing, Sanity publishing
-6. qa-launch — testing, security sanity checks, build/release/deployment verification
+4. marketing — positioning, sales/conversion copy, funnel, conversion typography brief (runs before design)
+5. seo — technical SEO, GEO, AEO, search-oriented site structure
+6. content — SEO/editorial content, FAQs, Sanity publishing
+7. qa-launch — testing, security sanity checks, build/release/deployment verification
+
+Agents may invoke any installed skill their agent file lists; skills that require local installs are skipped.
 
 Never call every agent by default.
 
@@ -48,6 +51,7 @@ Never call every agent by default.
 - Do not generate documentation purely for completeness.
 - Do not invoke SEO/content/design agents for a backend-only bug.
 - Do not invoke builder for content-only work unless code changes are necessary.
+- Invoke marketing only when conversion copy, pricing presentation or funnel is in scope.
 - Parallelize only genuinely independent tasks.
 - When a change is small and clear, execute directly instead of creating a large planning phase.
 
