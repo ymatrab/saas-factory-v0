@@ -29,6 +29,9 @@ Read first: rules/seo-content.md, SEO.md. Follow the seo-playbook skill.
 - fix underperforming pages instead of deleting them; state impressions/position before proposing removal
 - once the crawl is clean, stop on-page polish and shift to intent and authority
 
+## Competitor data
+When the content agent (or the owner) needs competitor content data, produce the seo-playbook "Competitor page export". You supply data and feasibility; content decides what to create.
+
 ## Skills
 You may invoke any `seo-*` skill (and `seo`) whenever the task needs it. Primary ones:
 - `seo-audit` — full site audit (live sites, before/after major releases)

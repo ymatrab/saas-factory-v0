@@ -1,9 +1,21 @@
 ---
 name: content
-description: SaaS Factory content + Sanity workflow and scheduled publishing batches.
+description: SaaS Factory content procedures — competitive content plan from competitor pages (traffic + conversion signals), content/tool briefs, Sanity workflow and scheduled publishing batches.
 ---
 
 # Content + Sanity Skill
+
+## Competitive content plan
+1. Get the competitor page export from the seo agent (3–5 competitors; their top pages by traffic, plus paid landing pages and most-linked pages).
+2. Classify each competitor page by type: blog, free tool/calculator, comparison/alternatives, template/example, use-case/industry, glossary, docs/help, landing.
+3. Score each page:
+   - **Traffic** (measured): estimated organic visits and traffic value (visits × CPC).
+   - **Conversion signal** (estimated, never measured): high if it is a paid-ads landing page, targets commercial/transactional or creation keywords, or has a strong product CTA/tool-to-signup path; medium if it's informational with a product CTA; low otherwise.
+4. Group by type to see which page types drive both traffic and conversion for the competitors.
+5. For each opportunity, decide: create, improve an existing page, or skip (apply rules/seo-content.md: demand, distinct intent, legitimacy, no per-variant padding).
+6. Prioritize: high traffic + high conversion signal first; free tools and comparison pages usually lead for SaaS when they fit the core action.
+7. Write the plan into CONTENT.md (template table) with an owner per item: content (articles/guides), marketing (conversion pages), builder + design (free tools).
+8. For each accepted item, write a brief: target query and intent, competitor page to beat and why it wins, our angle, outline, CTA to the product, internal links.
 
 ## Workflow
 1. Read accepted product/SEO context.

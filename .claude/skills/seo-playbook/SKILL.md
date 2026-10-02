@@ -16,6 +16,14 @@ description: SaaS Factory SEO workflow — page/intent mapping, search-intent ga
 
 Never invent SEO metrics.
 
+## Competitor page export (for the content agent)
+1. Confirm 3–5 competitors (owner-named first; otherwise top organic competitors from Semrush `competitors_research` or DataForSEO `google_competitors_domain`).
+2. Per competitor, pull top pages by organic traffic (Semrush `organic_research` pages report or DataForSEO `relevant_pages`), with their main keywords, position, estimated traffic and traffic value.
+3. Add conversion-signal data: their paid-search landing pages (Semrush `paid_search_research`), keyword intent (commercial/transactional), and most-linked pages (`backlinks_domain_pages`).
+4. Add the keyword gap: keywords they rank for and we don't (`domain_intersection`).
+5. Save dated raw responses; reuse them instead of re-pulling (rules/engineering.md, metered APIs).
+6. Hand over one table: competitor · URL · page type · top keywords · intent · est. traffic · traffic value · paid ads (y/n) · referring domains. Do not decide the content plan — that's the content agent's job.
+
 ## Search-intent gate
 1. Classify each keyword as retrieval (find a known thing), definition (what is X) or creation (make/do X).
 2. Target creation intent first; retrieval and definition queries go on supporting pages only.

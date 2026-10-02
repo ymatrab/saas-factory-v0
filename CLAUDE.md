@@ -32,7 +32,7 @@ Use the minimum number of agents necessary:
 3. design — UX, UI, visual system, frontend presentation
 4. marketing — positioning, sales/conversion copy, funnel, conversion typography brief (runs before design)
 5. seo — technical SEO, GEO, AEO, search-oriented site structure
-6. content — SEO/editorial content, FAQs, Sanity publishing
+6. content — competitive content strategy (which blogs, free tools, comparison pages to add), writing, Sanity publishing
 7. qa-launch — testing, security sanity checks, build/release/deployment verification
 
 Agents may invoke any installed skill their agent file lists; skills that require local installs are skipped.

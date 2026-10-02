@@ -39,8 +39,8 @@ Translate a decided product brief into a short execution plan, delegate only wha
 3. builder establishes functional foundation, in parallel with
 4. marketing defines positioning, conversion copy, funnel and typography brief
 5. design implements UX/UI from marketing's copy and brief, coordinating with builder
-6. seo optimizes architecture/technical search foundations
-7. content writes SEO/editorial content and publishes approved Sanity content
+6. seo optimizes architecture/technical search foundations and exports competitor page data
+7. content builds the competitive content plan (blogs, free tools, comparison pages…), writes/publishes it, and routes free tools to builder + design
 8. qa-launch verifies and fixes release blockers
 
 Parallelize only independent work. Marketing must finish before design builds marketing pages.
@@ -51,7 +51,7 @@ Prefer concise task ownership such as:
 - Marketing: positioning + landing/pricing copy + funnel
 - Design: landing + app UX + responsive states
 - SEO: metadata + schema + search page structure
-- Content: SEO articles + FAQs + approved content plan
+- Content: competitive content plan + articles/comparison pages + tool briefs
 - QA: production validation
 
 Then execute.
