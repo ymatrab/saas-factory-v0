@@ -1,0 +1,36 @@
+version: 0
+mode: execution_first
+
+default_stack:
+  framework: nextjs
+  language: typescript
+  package_manager: pnpm
+  database: supabase
+  auth: supabase
+  storage: supabase
+  cms: sanity
+  source_control: github
+  hosting: cloudflare
+
+agents:
+  - orchestrator
+  - builder
+  - design
+  - seo
+  - content
+  - qa-launch
+
+efficiency:
+  minimum_agent_calls: true
+  duplicate_analysis: false
+  broad_research_by_default: false
+  concise_plans: true
+  targeted_repo_reads: true
+
+quality:
+  no_lorem_ipsum: true
+  no_fake_social_proof: true
+  responsive_required: true
+  env_example_required: true
+  secrets_in_git: false
+  build_validation_required: true
