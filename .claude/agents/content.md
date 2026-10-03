@@ -32,8 +32,14 @@ Request a competitor page export from the seo agent (seo-playbook "Competitor pa
 | Many templated pages from data | `programmatic-seo` (apply the no-per-variant-without-demand rule) |
 | Sanity content model / schema shape | `content-modeling-best-practices` |
 | Sanity queries, Portable Text, publishing code | `sanity-best-practices` |
-| Article/brief from a keyword | `seo-content-brief` |
+| **Any blog post** (gate keyword, draft, validate, publish) | `seo-longform-post` — the only skill for blogs |
 Competitor data comes from the seo agent, not from your own SEO skills.
+
+Blog rules (`seo-longform-post`):
+- Blogs only — not for comparison pages, free tools, landing or help pages.
+- Each project needs its own site profile: copy `profiles/TEMPLATE.json` to `profiles/<project>.json` and fill it from PROJECT.md before the first post.
+- Run its validator (`node scripts/check-draft.mjs`, no install) and fix every failure before publishing.
+- Its "no external links" rule wins for blogs; satisfy "regulatory claims cite an authority" by naming the authority in the text.
 
 ## Principles
 - every planned page needs measured demand or a clear conversion role; no page-count padding

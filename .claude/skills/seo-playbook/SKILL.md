@@ -17,11 +17,12 @@ description: SaaS Factory SEO workflow — page/intent mapping, search-intent ga
 Never invent SEO metrics.
 
 ## Competitor page export (for the content agent)
-1. Confirm 3–5 competitors (owner-named first; otherwise top organic competitors from Semrush `competitors_research` or DataForSEO `google_competitors_domain`).
-2. Per competitor, pull top pages by organic traffic (Semrush `organic_research` pages report or DataForSEO `relevant_pages`), with their main keywords, position, estimated traffic and traffic value.
-3. Add conversion-signal data: their paid-search landing pages (Semrush `paid_search_research`), keyword intent (commercial/transactional), and most-linked pages (`backlinks_domain_pages`).
-4. Add the keyword gap: keywords they rank for and we don't (`domain_intersection`).
-5. Save dated raw responses; reuse them instead of re-pulling (rules/engineering.md, metered APIs).
+Data source: DataForSEO (MCP `mcp__dataforseo__*`). Set `limit` on every call.
+1. Confirm 3–5 competitors: owner-named first, otherwise `dataforseo_labs_google_competitors_domain` (or `serp_competitors` for the main keywords).
+2. Per competitor, top pages by organic traffic: `dataforseo_labs_google_relevant_pages` (keywords, positions, estimated traffic, traffic value).
+3. Conversion signals: paid keywords and their landing pages via `dataforseo_labs_google_ranked_keywords` with paid results, keyword intent via `dataforseo_labs_search_intent`, most-linked pages via `backlinks_domain_pages`.
+4. Keyword gap: `dataforseo_labs_google_domain_intersection` (they rank, we don't).
+5. Save dated raw responses in the project; reuse them instead of re-pulling.
 6. Hand over one table: competitor · URL · page type · top keywords · intent · est. traffic · traffic value · paid ads (y/n) · referring domains. Do not decide the content plan — that's the content agent's job.
 
 ## Search-intent gate

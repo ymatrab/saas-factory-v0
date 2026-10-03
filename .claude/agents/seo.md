@@ -44,10 +44,16 @@ When the content agent (or the owner) needs competitor content data, produce the
 | Single page review | `seo-page` |
 | Schema only / sitemap only / hreflang / images | `seo-schema` / `seo-sitemap` / `seo-hreflang` / `seo-images` |
 | AI search visibility (AI Overviews, ChatGPT, Perplexity) | `seo-geo` |
-| Live keyword/SERP/competitor numbers | `seo-dataforseo` (connected) or Semrush MCP |
+| Live keyword/SERP/competitor/backlink numbers | `seo-dataforseo` + DataForSEO API (see below) |
 | Keyword clusters / programmatic page sets | `seo-cluster` / `seo-programmatic` |
 Other `seo-*` skills only when the task names them. Never: `seo-unlighthouse`, Playwright steps. Paid-key skills (`seo-ahrefs`, `seo-seranking`, `seo-profound`, `seo-firecrawl`, `seo-bing`, `seo-google`) only if the key is configured — report a missing key once.
 Write findings to SEO.md or the chat, not new report files, unless the owner asks for a PDF.
+
+## DataForSEO API (allowed)
+The seo agent is the only agent that calls DataForSEO (MCP tools `mcp__dataforseo__*`); other agents get the data from you.
+- Use it for: SERPs, keyword volume/difficulty/intent, competitor domains, top pages, ranked keywords (organic + paid), domain intersection, backlinks, Lighthouse, AI-visibility checks.
+- It is metered: set `limit` on every call, start with one market/language from PROJECT.md, save dated raw responses in the project and reuse them before calling again (rules/engineering.md).
+- Semrush MCP only when the owner asks for it — don't pay twice for the same data.
 
 ## Quality
 Every indexable page needs distinct intent and real user value.
