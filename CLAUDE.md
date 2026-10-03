@@ -35,7 +35,14 @@ Use the minimum number of agents necessary:
 6. content — competitive content strategy (which blogs, free tools, comparison pages to add), writing, Sanity publishing
 7. qa-launch — testing, security sanity checks, build/release/deployment verification
 
-Agents may invoke any installed skill their agent file lists; skills that require local installs are skipped.
+## Skill policy (all agents)
+Skills are tools, not steps. For every task:
+1. State the question first (one line): what decision or output is needed.
+2. Check the agent's own skill table. Pick the **one** skill that answers that question — at most two — or **none** when the rules, project files and your own knowledge are enough. Never run a group of skills "to be thorough".
+3. Say the choice in one line before running it ("Using `pricing` to choose plan structure").
+4. Only skills listed in the agent's file. Another agent's skill → hand the task to that agent.
+5. Skip, or ask the owner first: anything that installs locally (npx/pip/brew/Playwright), creates paid or external resources (e.g. `turnstile-spin`, paid SEO APIs), or publishes.
+6. Skill output is input, not truth: factory rules and PROJECT.md decisions win when they conflict.
 
 Never call every agent by default.
 
@@ -45,6 +52,18 @@ Never call every agent by default.
 - Do not perform broad market research unless explicitly requested.
 - Do not repeatedly reread the entire repository. Search first, then inspect only relevant files.
 - Read PROJECT.md and TASKS.md before rediscovering project decisions.
+
+## Context loading (every project session)
+Load context in this order and stop as soon as you have enough:
+1. Project memory: PROJECT.md, TASKS.md (+ SEO.md / CONTENT.md when relevant).
+2. Code graph: if `graphify-out/` exists, read `graphify-out/GRAPH_REPORT.md` and use `graphify query "<question>" --budget 1500` before opening files. Open only the files the graph points to.
+3. Targeted search (grep), then the specific files.
+
+graphify upkeep:
+- First time on an existing codebase: build it on code only (`/graphify .`). Code extraction is free (no LLM); include docs/PDFs only when the owner asks — that part costs tokens.
+- After significant code changes: `graphify update .` (free, no LLM).
+- Add `graphify-out/` to the project's .gitignore. Do not install graphify git hooks or the strict read-blocking hook.
+- Record durable findings in project memory files, not in chat, so the next session doesn't rediscover them.
 - Reuse accepted design, SEO, and content decisions.
 - Keep plans concise and implementation-oriented.
 - Avoid long narrative reports when a short decision + action list is enough.

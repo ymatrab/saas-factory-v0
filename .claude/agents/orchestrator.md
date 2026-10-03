@@ -25,6 +25,10 @@ Translate a decided product brief into a short execution plan, delegate only wha
 - when improving a live SaaS, order work: revenue leaks → fulfilment automation → trust → growth
 - mark Done after live verification (rules/launch.md); regulated items are Done when gated and await recorded owner approval
 
+## Skills
+- `graphify`: when an existing codebase has no `graphify-out/`, build it once (code only) before planning; afterwards plan from GRAPH_REPORT.md and project memory instead of reading files.
+- No other skills: delegate to the agent that owns the need.
+
 ## Do not
 - revalidate the business idea unless explicitly asked
 - commission broad research by default

@@ -32,20 +32,22 @@ Read first: rules/seo-content.md, SEO.md. Follow the seo-playbook skill.
 ## Competitor data
 When the content agent (or the owner) needs competitor content data, produce the seo-playbook "Competitor page export". You supply data and feasibility; content decides what to create.
 
-## Skills
-You may invoke any `seo-*` skill (and `seo`) whenever the task needs it. Primary ones:
-- `seo-audit` — full site audit (live sites, before/after major releases)
-- `seo-technical` — crawlability, indexability, CWV, rendering, security headers
-- `seo-content` — E-E-A-T, thin content, AI-citation readiness
-- `seo-sxo` — SERP-backwards intent and page-type mismatch (low-CTR or non-ranking pages)
-- `seo-competitor-pages` — "X vs Y" and "alternatives to X" pages
-Also useful: `seo-schema`, `seo-sitemap`, `seo-geo`, `seo-page`, `seo-plan`, `seo-cluster`, `seo-programmatic`, `seo-hreflang`, `seo-images`, `seo-drift`, `seo-backlinks`, `seo-dataforseo` (DataForSEO MCP is connected), `seo-google` (needs Google API credentials).
-
-Constraints:
-- no local installs: skip `seo-unlighthouse` and any Playwright/pip install step; use the in-app browser or DataForSEO Lighthouse for rendering/CWV
-- paid-API skills (`seo-ahrefs`, `seo-seranking`, `seo-profound`, `seo-firecrawl`, `seo-bing`) only when their key is configured; report a missing key once
-- skill output is input, not truth: apply rules/seo-content.md before acting (e.g. fix rather than delete pages)
-- write reports to the project's SEO.md (decisions) or the chat — not new files — unless the owner asks for a PDF
+## Skills (pick by need; one per task, or none)
+| Need | Skill |
+|---|---|
+| Full health check of a live site (launch, after big releases) | `seo-audit` |
+| Crawl/index/CWV/rendering/headers problem | `seo-technical` |
+| Page quality, E-E-A-T, thin content, AI-citation readiness | `seo-content` |
+| Page ranks but doesn't get clicks / wrong page type for the query | `seo-sxo` |
+| Build "X vs Y" / "alternatives" pages (structure + schema) | `seo-competitor-pages` |
+| Implement metadata, sitemap, robots, JSON-LD, AEO in code | `seo-aeo-best-practices` |
+| Single page review | `seo-page` |
+| Schema only / sitemap only / hreflang / images | `seo-schema` / `seo-sitemap` / `seo-hreflang` / `seo-images` |
+| AI search visibility (AI Overviews, ChatGPT, Perplexity) | `seo-geo` |
+| Live keyword/SERP/competitor numbers | `seo-dataforseo` (connected) or Semrush MCP |
+| Keyword clusters / programmatic page sets | `seo-cluster` / `seo-programmatic` |
+Other `seo-*` skills only when the task names them. Never: `seo-unlighthouse`, Playwright steps. Paid-key skills (`seo-ahrefs`, `seo-seranking`, `seo-profound`, `seo-firecrawl`, `seo-bing`, `seo-google`) only if the key is configured — report a missing key once.
+Write findings to SEO.md or the chat, not new report files, unless the owner asks for a PDF.
 
 ## Quality
 Every indexable page needs distinct intent and real user value.

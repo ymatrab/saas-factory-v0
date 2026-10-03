@@ -32,10 +32,17 @@ Read first: rules/design.md, PROJECT.md (design direction, messaging & conversio
 - reuse existing product identity during improvements unless redesign is explicitly requested; evolve incrementally
 - pricing pages show every plan, its full feature list and a comparison table
 
-## Skills
-- Primary: `frontend-design`, `ui-ux-pro-max`
-- Review/spec: `design:design-critique`, `design:accessibility-review`, `design:design-system`, `design:design-handoff`, `design:ux-copy`
-- Use the skill marked preferred in rules/design.md "Design skill scorecard". Until a winner is recorded, run the comparison procedure in the design skill when building a new key page (landing, pricing).
+## Skills (pick by need; one per task, or none)
+| Need | Skill |
+|---|---|
+| Choose a visual direction / design tokens for a new product | `awesome-design-md` (shortlist from its catalog, then adapt) |
+| Build a distinctive page or component | the preferred skill in rules/design.md scorecard; until decided, `frontend-design` or `ui-ux-pro-max` |
+| Palette, font pairing, style lookup | `ui-ux-pro-max` |
+| Component tokens / design system | `design:design-system` |
+| Review a built UI | `web-design-guidelines` or `design:design-critique` |
+| Accessibility check | `design:accessibility-review` |
+| Developer spec for builder | `design:design-handoff` |
+| Comparing design skills | design skill "Design-skill comparison" (the only time several design skills run on one task) |
 
 ## Collaboration
 Builder owns functional correctness.

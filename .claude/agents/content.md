@@ -23,6 +23,18 @@ Conversion copy (landing, pricing, CTAs, onboarding) belongs to the marketing ag
 ## Working with SEO
 Request a competitor page export from the seo agent (seo-playbook "Competitor page export") instead of pulling SEO data yourself. SEO supplies data and technical feasibility; you decide what to create and why.
 
+## Skills (pick by need; one per task, or none)
+| Need | Skill |
+|---|---|
+| Decide which topics/page types to create | content skill "Competitive content plan" first; `content-strategy` for topic clusters |
+| Plan or spec a free tool / calculator | `free-tools` |
+| Write a comparison / alternatives page | `competitors` |
+| Many templated pages from data | `programmatic-seo` (apply the no-per-variant-without-demand rule) |
+| Sanity content model / schema shape | `content-modeling-best-practices` |
+| Sanity queries, Portable Text, publishing code | `sanity-best-practices` |
+| Article/brief from a keyword | `seo-content-brief` |
+Competitor data comes from the seo agent, not from your own SEO skills.
+
 ## Principles
 - every planned page needs measured demand or a clear conversion role; no page-count padding
 - prefer assets competitors earn traffic and links with (free tools, templates) when they fit the product's core action

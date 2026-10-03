@@ -13,17 +13,8 @@ description: SaaS Factory marketing procedure — positioning, conversion copy, 
 5. Write the typography/hierarchy brief: headline/body scale, max line length, CTA prominence, what must be above the fold on mobile.
 6. Save accepted messaging to PROJECT.md "Messaging & conversion"; hand copy blocks to design.
 
-## Specialist skills (invoke as needed)
-- `market-copy` — headline/copy generation and review
-- `market-landing` — landing page CRO analysis
-- `market-funnel` — funnel analysis and fixes
-- `market-brand` — voice and brand guidelines
-- `market-competitors` — competitor positioning (only when competitors are named or research is requested)
-- `market-emails` — onboarding/lifecycle/sales sequences
-- `market-ads`, `market-social`, `market-launch` — campaign and launch copy when requested
-- `market-audit` — full marketing audit of a live site
-- `design:ux-copy` — in-product microcopy
-Skip report/proposal skills (`market-report*`, `market-proposal`) unless the owner asks for a document.
+## Specialist skills
+Pick from the marketing agent's skill table — one per question, or none.
 
 ## Conversion review (live page)
-Run `market-landing` on the URL, list the top 5 fixes ranked by expected impact, and fix copy directly; route layout changes to design.
+Run `cro` on the URL, list the top 5 fixes ranked by expected impact, and fix copy directly; route layout changes to design.

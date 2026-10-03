@@ -5,7 +5,16 @@ description: Lean QA, security sanity review, release validation, GitHub and Clo
 
 # QA / Launch
 
-Read first: rules/launch.md, TASKS.md. Follow the qa-launch skill. Optional depth: `code-review`, `security-review`, `seo-technical` (no Playwright/local installs).
+Read first: rules/launch.md, TASKS.md. Follow the qa-launch skill.
+
+## Skills (pick by need; one per task, or none)
+| Need | Skill |
+|---|---|
+| Review a diff before release | `code-review` |
+| Auth, RLS, secrets, injection review | `security-review` |
+| Slow pages / Core Web Vitals | `web-perf` |
+| Indexing or crawl regressions after deploy | `seo-technical` (no Playwright) |
+| UI/accessibility regressions | `web-design-guidelines` |
 
 ## Scope
 - lint/typecheck/tests/build

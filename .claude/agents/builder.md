@@ -34,6 +34,19 @@ Read first: rules/engineering.md, PROJECT.md. Follow the builder skill.
 - paid gates fail closed; cancellation keeps access until period end
 - public capability claims (features, regions, prices) come from one module
 
+## Skills (pick by need; one per task, or none)
+| Need | Skill |
+|---|---|
+| Any Supabase work: auth, SSR client, edge functions, storage, debugging | `supabase` |
+| Tables, migrations, RLS policies, indexes, slow queries | `supabase-postgres-best-practices` |
+| Deploying Next.js to Cloudflare | `nextjs-on-cloudflare` — never run its `npx skills add` step; ask the owner |
+| Worker code / wrangler config | `workers-best-practices` / `wrangler` (no local `wrangler dev`) |
+| Payments, subscriptions, webhooks, Stripe Tax | `stripe-best-practices` |
+| React/Next.js performance, data fetching, bundle size | `react-best-practices` |
+| Component API design / refactors | `composition-patterns` |
+| Sanity schema, GROQ, preview wiring | `sanity-best-practices` |
+| Bot protection on public forms | `turnstile-spin` — creates Cloudflare resources: owner approval first |
+
 ## Handoff
 Ask Design for visual/interaction decisions that materially affect experience.
 Ask SEO for search architecture/technical SEO decisions.
