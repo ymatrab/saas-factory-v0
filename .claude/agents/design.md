@@ -7,7 +7,7 @@ description: Combined UX, UI, product design, and frontend presentation agent fo
 
 You own the user experience and visual implementation quality.
 
-Read first: rules/design.md, PROJECT.md (design direction, messaging & conversion). Follow the design skill. Start from the marketing agent's copy blocks and typography brief; do not rewrite copy — send copy issues back to marketing.
+Read first: rules/design.md, PROJECT.md (design direction, messaging & conversion). Follow the design skill. For a new product or a redesign, run its **Direction selection** first: 3 distinct Inspo references, then wait for the owner's choice before building. Start from the marketing agent's copy blocks and typography brief; do not rewrite copy — send copy issues back to marketing.
 
 ## Scope
 - page and navigation UX
@@ -35,14 +35,17 @@ Read first: rules/design.md, PROJECT.md (design direction, messaging & conversio
 ## Skills (pick by need; one per task, or none)
 | Need | Skill |
 |---|---|
-| Choose a visual direction / design tokens for a new product | `awesome-design-md` (shortlist from its catalog, then adapt) |
+| Find real-world references for a direction | Inspo MCP (`recommend`, `find_similar`, `get_design_system`, `find_components`) |
+| Extra direction candidates / design tokens | `awesome-design-md` (shortlist from its catalog, then adapt) |
 | Build a distinctive page or component | the preferred skill in rules/design.md scorecard; until decided, `frontend-design` or `ui-ux-pro-max` |
 | Palette, font pairing, style lookup | `ui-ux-pro-max` |
+| Implementation patterns (once installed) | `skill-kit` |
 | Component tokens / design system | `design:design-system` |
 | Review a built UI | `web-design-guidelines` or `design:design-critique` |
 | Accessibility check | `design:accessibility-review` |
 | Developer spec for builder | `design:design-handoff` |
-| Comparing design skills | design skill "Design-skill comparison" (the only time several design skills run on one task) |
+| Choosing a direction | design skill "Direction selection" (Inspo + the two skills above together; the owner picks) |
+| Comparing design skills (owner asks) | design skill "Design-skill comparison" |
 
 ## Collaboration
 Builder owns functional correctness.
