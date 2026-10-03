@@ -11,6 +11,7 @@
 - **Accessibility minimums.** Tap targets ≥44px, text contrast ≥4.5:1, errors announced to screen readers, visible focus, inputs ≥16px so iOS doesn't zoom.
 - **Evolve, don't replace.** Do not swap the established palette, fonts or geometry in one pass. Change incrementally, with evidence, unless the owner asks for a redesign.
 - **Owner picks the direction from real references.** Before a new product or redesign: 3 substantially different Inspo directions (macrostructure, type, density, color, geometry, navigation, rhythm), owner chooses, then an original system — never a copy of the reference.
+- **Audience fit before looks.** When the owner picks a reference, say in one line whether it suits the product's buyers (trust, seriousness, age, tech comfort) before building, and keep playfulness as an accent for money/payroll/legal products. PayDocs 2026-10-03: a playful reference was built, then rejected as wrong for small employers; the accepted direction came from the owner's brief words ("friendly professional, product-led, lightly editorial"), with references as inspiration only.
 - **Style what actually renders.** Before restyling, grep that the class/selector is used. Review automated token/style migrations for corrupted values (e.g. 8-digit hex) and lost semantic colors (error/success tints).
 
 ## Design skill scorecard
