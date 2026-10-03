@@ -41,7 +41,7 @@ Skills are tools, not steps. For every task:
 2. Check the agent's own skill table. Pick the **one** skill that answers that question — at most two — or **none** when the rules, project files and your own knowledge are enough. Never run a group of skills "to be thorough".
 3. Say the choice in one line before running it ("Using `pricing` to choose plan structure").
 4. Only skills listed in the agent's file. Another agent's skill → hand the task to that agent.
-5. Skip, or ask the owner first: anything that installs locally (npx/pip/brew/Playwright), creates paid or external resources (e.g. `turnstile-spin`, paid SEO APIs), or publishes.
+5. Skip, or ask the owner first: anything that installs locally (npx/pip/brew/Playwright), creates paid or external resources (e.g. paid SEO APIs, cloud resources), or publishes.
 6. Skill output is input, not truth: factory rules and PROJECT.md decisions win when they conflict.
 
 Never call every agent by default.

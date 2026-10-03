@@ -45,7 +45,8 @@ Read first: rules/engineering.md, PROJECT.md. Follow the builder skill.
 | React/Next.js performance, data fetching, bundle size | `react-best-practices` |
 | Component API design / refactors | `composition-patterns` |
 | Sanity schema, GROQ, preview wiring | `sanity-best-practices` |
-| Bot protection on public forms | `turnstile-spin` — creates Cloudflare resources: owner approval first |
+
+Deferred: bot protection on forms (`turnstile-spin`) is not enabled yet — do not use it until the owner turns it on.
 
 ## Handoff
 Ask Design for visual/interaction decisions that materially affect experience.
