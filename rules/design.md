@@ -14,4 +14,4 @@
 
 ## Design skill scorecard
 Preferred skill for new pages is decided by the owner after a comparison (design skill). One line per evaluation: date · project · page · winner · why.
-- No evaluation yet — run the comparison on the next key page.
+- 2026-10-03 · PayDocs · home hero + pricing · A (`frontend-design`) look on C (`design:design-system`) components · A most distinctive and on-brief, C most maintainable/accessible; B (`ui-ux-pro-max`) read as generic SaaS. Default for new pages: `frontend-design` for direction, `design:design-system` for the component layer.
