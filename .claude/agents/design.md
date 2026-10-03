@@ -39,7 +39,7 @@ Read first: rules/design.md, PROJECT.md (design direction, messaging & conversio
 | Extra direction candidates / design tokens | `awesome-design-md` (shortlist from its catalog, then adapt) |
 | Build a distinctive page or component | the preferred skill in rules/design.md scorecard; until decided, `frontend-design` or `ui-ux-pro-max` |
 | Palette, font pairing, style lookup | `ui-ux-pro-max` |
-| Implementation patterns (once installed) | `skill-kit` |
+| Apply a style, palette, type pairing, page pattern or audit rule inside the accepted direction | `skill-kit` (read its INDEX.md, open 1–3 files) |
 | Component tokens / design system | `design:design-system` |
 | Review a built UI | `web-design-guidelines` or `design:design-critique` |
 | Accessibility check | `design:accessibility-review` |

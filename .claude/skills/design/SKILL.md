@@ -16,7 +16,7 @@ description: SaaS Factory design workflow — Inspo direction selection (3 disti
 8. Before restyling, confirm the selectors are actually rendered; apply rules/design.md (pricing layout, a11y minimums, incremental change).
 
 ## Direction selection (required before implementing a new product or a redesign)
-Tools: Inspo MCP (real production sites: screens, palettes, fonts, DESIGN.md, components) + `awesome-design-md` + `ui-ux-pro-max`. Skip only for small changes inside an accepted direction.
+Tools: Inspo MCP (real production sites: screens, palettes, fonts, DESIGN.md, components) + `skill-kit` + `awesome-design-md` + `ui-ux-pro-max`. Skip only for small changes inside an accepted direction.
 1. Understand the product: audience, core action, trust needs, PROJECT.md "Messaging & conversion".
 2. Search Inspo for relevant real-world references (start with `recommend(brief)`; use `find_similar` / search to widen). `awesome-design-md` and `ui-ux-pro-max` may add candidates.
 3. Select **3 visually distinct directions**. They must NOT be variations of the same modern SaaS look; they differ substantially in macrostructure, typography, density, color philosophy, geometry, navigation and visual rhythm. Example spread: A restrained / Swiss / professional · B editorial / structural / distinctive · C expressive / playful / product-led.
@@ -24,7 +24,7 @@ Tools: Inspo MCP (real production sites: screens, palettes, fonts, DESIGN.md, co
 5. **Stop and wait for the owner's choice.** Build nothing before it.
 6. Never copy the chosen site (layout, copy, logo, illustrations, signature colors or proprietary fonts).
 7. Extract principles from it (`get_design_system` for tokens/type ramp/spacing as evidence) and create an original design system: own tokens, type scale, components, recorded in the project's design doc.
-8. Implement with the scorecard's preferred skills (rules/design.md) + `skill-kit` when installed, then review (`design:design-critique`, `design:accessibility-review`).
+8. Implement with the scorecard's preferred skills (rules/design.md) + `skill-kit` for exact style/palette/type/pattern rules, then review (`design:design-critique`, `design:accessibility-review`).
 
 ## Design-skill comparison (only when the owner asks to compare skills)
 Goal: show the owner which design skill produces the best result on a real page.
