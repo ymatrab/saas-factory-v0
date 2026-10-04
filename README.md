@@ -52,7 +52,7 @@ The Makecepeit extraction should be treated as the primary source and PayDocs as
 
 ## Folder map
 ```
-saas-factory-v0/
+Elliot-v0/
 ├── CLAUDE.md
 ├── README.md
 ├── factory.config.yaml

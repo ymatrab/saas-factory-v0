@@ -1,6 +1,6 @@
 # Prompt — Fill the SaaS Factory files from extracted learnings
 
-Run this from Claude Code while the working directory is the `saas-factory-v0` repository/folder. Save the outputs from prompts 01 and 02 in `/imports`, or paste them when asked.
+Run this from Claude Code while the working directory is the `Elliot-v0` repository/folder. Save the outputs from prompts 01 and 02 in `/imports`, or paste them when asked.
 
 ---
 
