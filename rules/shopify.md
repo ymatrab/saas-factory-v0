@@ -23,11 +23,23 @@ Learned building NicheUp (2026-10). Re-check shopify.dev before each new app: th
 - Shopify sends `?locale=` only on the first embedded load. Cookies in the admin iframe are third-party (req. 1.1.1) → persist locale server-side (shop row), cookie only as a fast path.
 - No documented RTL API in Polaris web components: set `dir` on your own wrapper and test.
 
+## Background work on serverless
+- Never run catalog-wide work in one request: persist a cursor/phase on a job row, process a bounded slice (~40 s, ≤100 products) per call, drive it from a fetcher after first paint — never in a page loader (BFS LCP).
+- Writing `$app` metafields fires `products/update` for that product → store a signature of the fields you care about and skip unchanged webhooks, or you build an infinite loop. Never tie-break on `updatedAt`.
+- Job dedupe via a partial unique index must also handle re-queueing a running job (P2002) — supersede, don't throw.
+- `metafieldsSet` is atomic per call: on userErrors retry items individually and skip deleted owners.
+- A hook/component used during render must not live in a `*.client.ts` file (stripped from the server bundle). Keep a dependency-free import-resolution check in `scripts/check.mjs` — tsc doesn't run locally.
+
 ## Billing
 - Off-platform billing is banned. Choose **Shopify App Pricing** (hosted plan page, no code, no `app_subscriptions/update` webhook, default for new apps) or the **Billing API** (in-app plan page, more code). Opting into App Pricing blocks new Billing API recurring charges.
 - `test: true` must also apply to **development stores** (`shop.plan.partnerDevelopment`), or reviewers can't approve charges once global test mode is off.
 - Shopify cancellation is immediate; say so in downgrade copy. Track one trial per shop yourself.
-- Merchants must be able to upgrade/downgrade in-app (req. 1.2.3).
+- Merchants must be able to upgrade/downgrade in-app (req. 1.2.3). "Switch to Free" must cancel ACTIVE **and** ACCEPTED (scheduled) subscriptions. After a declined charge Shopify still returns to your returnUrl — cap polling, then show "declined". Set `trialUsedAt` only when the subscription is ACTIVE.
+- Plan comparison must not show unreleased features ("Coming soon") — hide them behind the capability flag.
+
+## Public pages
+- Privacy/support pages served from the app domain; legal text 404s until an owner-approval env flag, and any page 404s while an owner placeholder remains. Placeholder regex must allow accents and annotations (`/\[\p{Lu}[\p{Lu}\d _\/.'’-]{2,}[^\]]*\]/u`); owner notes as HTML comments, stripped on render.
+- robots.txt + `X-Robots-Tag: noindex` on /app, /api, /proxy, /webhooks, /auth and `/`.
 
 ## Compliance and listing
 - Mandatory webhooks: `customers/data_request`, `customers/redact`, `shop/redact` (`compliance_topics` in toml; 401 on bad HMAC) + `app/uninstalled` cleanup.
