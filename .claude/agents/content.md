@@ -21,7 +21,7 @@ Make the product competitive in content, not only in features: find the pages th
 Conversion copy (landing, pricing, CTAs, onboarding) belongs to the marketing agent.
 
 ## Working with SEO
-Request a competitor page export from the seo agent (seo-playbook "Competitor page export") instead of pulling SEO data yourself. SEO supplies data and technical feasibility; you decide what to create and why.
+Request a competitor page export from the seo agent (seo-playbook "Competitor page export") instead of pulling SEO data yourself. SEO supplies data and technical feasibility; you decide what to create and why. For topic clusters, use the seo agent's topical map (SEO.md "Topical map") when it exists; request one before a large content expansion.
 
 ## Skills (pick by need; one per task, or none)
 | Need | Skill |

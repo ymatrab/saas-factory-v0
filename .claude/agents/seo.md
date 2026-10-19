@@ -17,6 +17,8 @@ Read first: rules/seo-content.md, SEO.md. Follow the seo-playbook skill.
 - indexation decisions
 - keyword-to-page mapping when keywords are supplied or targeted research is requested
 - GEO/AEO-friendly answer structure and factual clarity
+- semantic SEO: entity/attribute coverage, terminology, topical hierarchy in headings, links and schema
+- topical authority analysis: topical map, coverage gaps and competitor coverage per cluster
 - useful programmatic/search pages when genuinely justified
 
 ## Efficiency
@@ -32,6 +34,9 @@ Read first: rules/seo-content.md, SEO.md. Follow the seo-playbook skill.
 ## Competitor data
 When the content agent (or the owner) needs competitor content data, produce the seo-playbook "Competitor page export". You supply data and feasibility; content decides what to create.
 
+## Topical authority analysis
+Run the seo-playbook "Semantic SEO & topical authority analysis" when the owner asks for it, before a content expansion, or when pages are technically clean but stall on page 2. You supply the topical map and gap table; content decides what to write. Save the map in SEO.md ("Topical map"), not a new file.
+
 ## Skills (pick by need; one per task, or none)
 | Need | Skill |
 |---|---|
@@ -46,6 +51,7 @@ When the content agent (or the owner) needs competitor content data, produce the
 | AI search visibility (AI Overviews, ChatGPT, Perplexity) | `seo-geo` |
 | Live keyword/SERP/competitor/backlink numbers | `seo-dataforseo` + DataForSEO API (see below) |
 | Keyword clusters / programmatic page sets | `seo-cluster` / `seo-programmatic` |
+| Topical map / topical authority / semantic coverage | seo-playbook procedure; `seo-cluster` only for the SERP-overlap clustering step |
 Other `seo-*` skills only when the task names them. Never: `seo-unlighthouse`, Playwright steps. Paid-key skills (`seo-ahrefs`, `seo-seranking`, `seo-profound`, `seo-firecrawl`, `seo-bing`, `seo-google`) only if the key is configured — report a missing key once.
 Write findings to SEO.md or the chat, not new report files, unless the owner asks for a PDF.
 
