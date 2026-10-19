@@ -27,15 +27,31 @@ Data source: DataForSEO (MCP `mcp__dataforseo__*`). Set `limit` on every call.
 
 ## Semantic SEO & topical authority analysis
 Question: which topics must the site own to be the trusted source for its core entity, and where is it weaker than competitors?
-Data: DataForSEO, `limit` on every call, one market/language from PROJECT.md, dated raw responses saved and reused. Never invent scores — every number traces to a saved response.
+Data: first-party sources first, when the project has them — they are free and show what the site actually ranks for:
+- **Search Console**, query × page over 3 months: real positions, long-tail queries, and which of our URLs Google rotates for one query.
+- **Bing Webmaster → AI Performance**: Copilot grounding queries and the Topic Portfolio opportunity queries. Dashboard only, no API.
+- **Analytics / the product's own funnel**: sign-ups and checkouts by landing page. GA4 under consent mode counts only visitors who accepted cookies, so prefer the product's own counts.
+
+DataForSEO fills what they can't: volumes, SERPs and People Also Ask, competitor coverage. `limit` on every call, one market/language from PROJECT.md, dated raw responses saved and reused. Never invent scores — every number traces to a saved response or export.
 1. **Central entity and source context.** From PROJECT.md: the product's core entity (e.g. "invoice"), the audience, and what the product legitimately does. Topics that don't connect to it are out of scope.
 2. **Entity map.** Core entity → attributes (types, parts, steps, rules, costs, problems) → related entities (tools, roles, documents, regulations). Source the questions from `dataforseo_labs_google_keyword_ideas` / `related_keywords` and SERP People Also Ask (`serp_organic_live_advanced`). Apply the stay-legitimate rule.
 3. **Topical map.** Cluster queries by SERP overlap (`seo-cluster`). Split into **core** clusters (creation intent, close to the product, links to signup) and **outer** clusters (definitions, comparisons, how-tos that feed the core). One hub per cluster, spokes only where intent is distinct.
-4. **Coverage audit.** Map each node to an existing URL: covered / thin / cannibalized (2+ URLs for one intent) / missing. Use our `ranked_keywords` for real positions.
+4. **Coverage audit.** Map each node to an existing URL: covered / thin / cannibalized (2+ URLs for one intent) / missing. Take positions and cannibalization from Search Console when available: a query where 2+ of our URLs earn impressions is cannibalized even if `ranked_keywords` shows one. Fall back to `ranked_keywords`.
 5. **Competitor coverage.** For the 3–5 competitors from the competitor export, count nodes each one covers per cluster (`relevant_pages`, `domain_intersection`). Report per cluster: nodes total · we cover · best competitor covers · our avg position · their avg position. That ratio is the topical-authority gap; state it as counts, not a made-up score.
+   - **Conversion weight.** Per cluster: landing visitors → sign-ups → checkouts or purchases. A cluster that ranks but never converts is not where authority work goes. Say which data source and how many days the figures cover.
 6. **Semantic page check** (core hubs first). Compare each hub against the top 3 ranking pages (`on_page_content_parsing`): attributes and questions they answer that we don't, one consistent term per concept, H2/H3 following the entity → attribute order, direct first-sentence answers. JSON-LD `about`/`mentions` only for entities visible on the page.
 7. **Internal links.** Hub ↔ spokes both ways, spoke → product page, contextual anchors naming the target entity; outer clusters link inward to core, not the reverse chain. Flag orphans and links that cross clusters without a reason.
-8. **Hand-off.** One table in SEO.md "Topical map": cluster · core/outer · node · intent · URL or missing · status · competitor coverage · priority (core + missing + competitor-covered first). Content decides what to write; builder fixes links/schema.
+   - Count contextual body links only. Header, footer and nav repeat on every page and say nothing about clusters.
+   - Read the code that builds "related" blocks. A `slice(0, n)` over a global list sends every page's links to the same few URLs.
+   - On programmatic page sets, fix the rule once (a cluster map in code that every page reads), not page by page.
+8. **Hand-off.** One table in SEO.md "Topical map": cluster · core/outer · node · intent · URL or missing · status · competitor coverage · conversion · priority. Priority goes first to core clusters that convert, with nodes that are missing, thin or covered by competitors. Retrieval-intent clusters are never a priority, even when competitors cover them. AI opportunity queries pass the same intent gate; most are off-topic or retrieval. Content decides what to write; builder fixes links/schema. If PROJECT.md names an owner tracking view (sheet, board), add the priorities there too.
+9. **Baseline and re-check.** Record a dated baseline per core cluster in SEO.md:
+   - average position
+   - URLs competing per head term
+   - % of impressions in the top 10
+   - sign-ups and checkouts
+
+   Re-run monthly against it. Judge the work by sign-ups and purchases, not impressions or visits.
 
 ## Search-intent gate
 1. Classify each keyword as retrieval (find a known thing), definition (what is X) or creation (make/do X).

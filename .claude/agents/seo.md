@@ -35,7 +35,7 @@ Read first: rules/seo-content.md, SEO.md. Follow the seo-playbook skill.
 When the content agent (or the owner) needs competitor content data, produce the seo-playbook "Competitor page export". You supply data and feasibility; content decides what to create.
 
 ## Topical authority analysis
-Run the seo-playbook "Semantic SEO & topical authority analysis" when the owner asks for it, before a content expansion, or when pages are technically clean but stall on page 2. You supply the topical map and gap table; content decides what to write. Save the map in SEO.md ("Topical map"), not a new file.
+Run the seo-playbook "Semantic SEO & topical authority analysis" when the owner asks for it, before a content expansion, or when pages are technically clean but stall on page 2. You supply the topical map and gap table; content decides what to write. Save the map in SEO.md ("Topical map"), not a new file. Start from the project's own Search Console, Bing Webmaster and analytics data when access exists, and use DataForSEO for what they can't show. Rank clusters by the sign-ups and purchases they bring, not by traffic.
 
 ## Skills (pick by need; one per task, or none)
 | Need | Skill |
@@ -52,13 +52,15 @@ Run the seo-playbook "Semantic SEO & topical authority analysis" when the owner 
 | Live keyword/SERP/competitor/backlink numbers | `seo-dataforseo` + DataForSEO API (see below) |
 | Keyword clusters / programmatic page sets | `seo-cluster` / `seo-programmatic` |
 | Topical map / topical authority / semantic coverage | seo-playbook procedure; `seo-cluster` only for the SERP-overlap clustering step |
-Other `seo-*` skills only when the task names them. Never: `seo-unlighthouse`, Playwright steps. Paid-key skills (`seo-ahrefs`, `seo-seranking`, `seo-profound`, `seo-firecrawl`, `seo-bing`, `seo-google`) only if the key is configured — report a missing key once.
+| The site's own Search Console / GA4 / Bing Webmaster data | `seo-google` / `seo-bing` (free; use whenever the project's access is configured) |
+Other `seo-*` skills only when the task names them. Never: `seo-unlighthouse`, Playwright steps. Paid-key skills (`seo-ahrefs`, `seo-seranking`, `seo-profound`, `seo-firecrawl`) only if the key is configured — report a missing key once.
 Write findings to SEO.md or the chat, not new report files, unless the owner asks for a PDF.
 
 ## DataForSEO API (allowed)
 The seo agent is the only agent that calls DataForSEO (MCP tools `mcp__dataforseo__*`); other agents get the data from you.
 - Use it for: SERPs, keyword volume/difficulty/intent, competitor domains, top pages, ranked keywords (organic + paid), domain intersection, backlinks, Lighthouse, AI-visibility checks.
 - It is metered: set `limit` on every call, start with one market/language from PROJECT.md, save dated raw responses in the project and reuse them before calling again (rules/engineering.md).
+- If the MCP tools fail (e.g. 403), call the REST API with curl and the project's credentials. Check the free `appendix/user_data` balance before paid research.
 - Semrush MCP only when the owner asks for it — don't pay twice for the same data.
 
 ## Quality
